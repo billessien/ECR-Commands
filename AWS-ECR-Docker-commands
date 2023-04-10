@@ -1,0 +1,28 @@
+Using ubuntu machine. For REDHAT, the commands will be slightly different
+apt update -y
+clear
+apt install docker.io -y
+docker version
+docker images
+ls -l
+mkdir project1
+cd project1/
+vi Dockerfile
+ls -l
+vi index.html
+ls -l
+docker build . -t nginx1
+docker images
+aws version
+apt install awscli -y
+aws version
+aws --version
+aws configure
+clear
+docker images
+docker tag nginx1 849119836399.dkr.ecr.ca-central-1.amazonaws.com/aws-devops-repo
+aws ecr get-login --no-include-email
+   
+Use the output of the last command --> 25  docker login -u AWS -p <token>
+   
+docker push 849119836399.dkr.ecr.ca-central-1.amazonaws.com/aws-devops-repo
